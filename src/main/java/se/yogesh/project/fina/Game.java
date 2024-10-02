@@ -3,12 +3,13 @@ import java.util.Scanner;
 
 public class Game {
 
-        private Player player1;
+        private Player player1;  //its a player attribute of Player class
         private Player player2;
         private Dice dice;
 
-        public Game() {
-            dice = new Dice();  // Initialize dice
+        public Game() {   // its a constructor
+
+            dice = new Dice();  // Initialize dice or creates a dice object that will generate random number
         }
 
         public void start() {
@@ -16,6 +17,7 @@ public class Game {
 
             // Get player names
             System.out.print("Enter name of Player 1: ");
+
             player1 = new Player(scanner.nextLine());
 
             System.out.print("Enter name of Player 2: ");
@@ -55,13 +57,7 @@ public class Game {
             } else {
                 System.out.println("It's a tie!");
             }
-        }
-    public static void main(String[] args) {
-        Game game = new Game();
-        game.start();  // Start the game
-    }
-
-        // Main method to run the game
+        }        // Main method to run the game
 
     }
 
